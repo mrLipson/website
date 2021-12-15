@@ -1,0 +1,31 @@
+@import '../base/variables';
+@import '../base/mixins';
+
+body {
+    background: #333;
+}
+
+.container {
+    max-width: 768px;
+    margin: 0 auto;
+}
+
+@import '../blocks/header.scss';
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    background: $white;
+}   
+
+@import '../blocks/section-dark-gray';
+
+@import '../blocks/section-light-gray';
+
+@import '../blocks/section-green.scss';
+
+@import 'section-orange';
+
+@import 'footer';

@@ -1,0 +1,82 @@
+// mixins for fonts
+
+@mixin font {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+@mixin big-font {
+    font-size: 18px;
+    line-height: 26px;
+}
+
+// mixins for content
+
+@mixin content-small-item ($color: $black) {
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    color: $color;
+    @include font;
+}
+
+@mixin content-big-item {
+    align-items: flex-start;
+    text-align: center;
+    padding: 30px 46px 53px 25px;
+    @include big-font;
+}
+
+// mixins for items
+
+@mixin item ($height, $bg, $color: $black) {
+    display: flex;
+    align-items: flex-end;
+    padding: 15px;
+    height: $height;
+    background: $bg;
+    @include main-font;
+}
+
+@mixin square-big {
+    display: flex;
+    align-items: flex-start;
+    text-align: center;
+    padding: 30px 35px;
+    width: 100%;
+    height: 100%;
+    @include font-big;
+}
+
+@mixin rectangle-big ($aaa) {
+    display: flex;
+    justify-content: space-between;
+    width: 492px;
+    min-height: 155px;
+    margin: $aaa;
+}
+
+// mixins for blocks
+
+@mixin square-vertical {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    
+}
+
+@mixin rectangle-vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 241px;
+    height: 320px;
+    margin-bottom: 5px;
+}
